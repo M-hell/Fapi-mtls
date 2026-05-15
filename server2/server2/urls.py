@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import mtls_status, server_time
+from .views import mtls_status, receive_PEDS_request, server_time
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/mtls-status/', mtls_status, name='mtls-status'),
     path('api/server-time/', server_time, name='server-time'),
+    path('api/receive-peds-request/', receive_PEDS_request, name='receive-request'),
 ]
